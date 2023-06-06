@@ -1,0 +1,41 @@
+{{-- Different Discussions Report --}}
+<div class="main-page-notices-news pt-5 " id="homeNoticeSection">
+  <div class="container">
+    <div class="facultyTextDiv">
+      <span class="facultyText float-right">Meeting Reports</span>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="container notice-full">
+    <div class="row">
+    @foreach ($cabinetCategory as $category)
+    <div class="col-md-6 mt-3">
+      <div class="p-3 card" style="background: #fff; font-family: poppins; carsor: pointer; height: 200px; overflow: auto; padding: 10px; color: #000;">
+        <div class="row mb-3">
+          <div class="col-md-12">
+            <h4 class="cabinet-category" style="font-weight: 700; font-size: 21px; line-height: 4px;">
+              {{ $category->name }}
+            </h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img src="{{ asset('images/' . App\Helpers\ReturnPathHelper::getCabinetCategoryImage($category->id)) }}" alt="{{ $category->name }}" style="width: 100px;height: 100px;">
+          </div>
+          <div class="col-md-8">
+            <ul class="cabinet-sub-category">
+              @foreach ($category->cabinets as $sub)
+              <li style="font-size: 15px;list-style-image: url('https://cabinet.gov.bd/themes/responsive_npf/images/bullet_arrow.png');"><a href="{!! route('reports.show', ['category_slug' => $category->slug, 'subcategory_slug' => $sub->slug]) !!}" class="report"><i></i>{{ $sub->subcategory_title }}</a></li>
+              @endforeach
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    @endforeach
+   
+
+  </div>
+</div>
+</div>
+<!-- End Report  Section -->

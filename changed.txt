@@ -1,0 +1,44 @@
+1. Files Folder e cabinets folder add.
+2. images folder e cabinets folder add
+3. defaults -> cabinet.png
+
+
+
+
+Migration:
+1. First, Database Backup with all data
+
+1. Change env to local an run command using ssh or Artisan
+
+Create route and add below line
+Artisan::call('migrate');
+
+
+Enable Terminal:
+In CPanel -> Ekdom Nice -> Exclusive for Namecheap Customers -> Manage SSH-> enable -> 
+Back to Home -> Advanced -> Terminal
+
+
+cd /
+
+
+
+Database Save As Seesd:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

@@ -1,0 +1,2 @@
+teachers table education comment
+project table exist korle delete kore notunta migration

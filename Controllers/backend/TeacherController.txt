@@ -1,0 +1,2 @@
+148. //$teacher->education = $request->education;
+254. //$teacher->education = $request->education;

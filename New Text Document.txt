@@ -1,0 +1,52 @@
+1. change font: In master.blade.php:
+
+<!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&family=Sail&display=swap" rel="stylesheet">
+
+
+In css->custom->style.css 71 num. line-> playfair display -> body(poppins) . In style.min.css -> 
+
+
+
+2. Developers:
+
+frontend-> developers-> others:
+pstu/admin/developers/login ..
+
+In Database Seeder:
+[
+          'name'                => 'Dr. Md. Samsuzzaman',
+          'slug'                => 'dr-samsuzzaman',
+          'priority'            => '2',
+          'teacher_or_student'  => 1,
+          'image'               => 'samsuzzaman.jpg',
+          'contribution'        => 'Instructor (Update Version)',
+          'about'               => 'Professor at Computer and Communication Engineering Department of
+          Patuakhali Science and Technology University ',
+          'phone_no'  => '01712653210',
+          'email'  => 'sobuz@pstu.ac.bd',
+          'address'  => 'Jessore'
+        ],
+
+
+
+[
+          'name'                => 'Md. Abdul Alim',
+          'slug'                => 'abdula-alim',
+          'priority'            => '4',
+          'teacher_or_student'  => 0,
+          'image'               => 'abdul.jpg',
+          'contribution'        => 'Designer and Developer',
+          'about'               => 'Student of Computer Science and Engineering Faculty of
+          Patuakhali Science and Technology University ',
+          'phone_no'  => '',
+          'email'  => 'alim15@cse.pstu.ac.bd',
+          'address'  => 'Pabna'
+        ]
+
+
+Add Image ..Seeder Command: php artisan db:seed --class=DevelopersTableSeeder
+
+3. Admin Login Controller...Developer comment out
